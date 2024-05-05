@@ -19,13 +19,56 @@ console.log(replace)
 const split = string.split(' ')                           // split : Separa en una lista de acuerdo al argumento que le pasemos s 
 console.log(split)
 //Flotantes 
-let flotante = 3.1416
-consol.log(flotante)    
-consol.log(typeof flotante)
-let redondeo =  flotante.round()                            //round
-let cell = flotante.cell()                                  //cell
+let flotante = 3.1416 ; 
+console.log(flotante)    
+console.log(typeof flotante)
+//let redondeo =  flotante.round()                            //round
+//let cell = flotante.cell()                                  //cell
 //Casteo 
+
+//No alcance a coopiar esta parte xd 
 
 //Undefined
 let nada; 
-consol.log(typeof nada)
+console.log(typeof nada)
+
+//Boleanos 
+
+//Valores para falsos 
+/*
+Boleean(0);
+Boleean(null);
+Boleean(false);
+Boleean("");
+Boleean("undefined");
+*/
+
+// Arrays 
+let array = [12,23.123, 'texto', [1,2,3]]
+console.log(array[1])
+//console.log(array.length())
+console.log(array[3])
+
+array.push("at the end") //Agrega un valor al final de la matriz
+
+array.pop ()
+
+array.unshift("at the end")
+
+array.shift("at the begining ")
+
+//Asignacion por referencia 
+// * Los arreglos se guardan por referencia 
+let array2 = array 
+
+console.log ("My array", array)
+console.log ("My array2", array2)
+array2.push("other value")
+console.log ("My array", array)
+console.log ("My array2", array2)
+
+notLinkedArray = [...array] // Spread operator 
+notLinkedArray.push("different value") 
+
+console.log ("My array", array)
+console.log ("notlinked", notLinkedArray)
