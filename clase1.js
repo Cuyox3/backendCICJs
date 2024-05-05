@@ -69,6 +69,16 @@ console.log ("My array2", array2)
 
 notLinkedArray = [...array] // Spread operator 
 notLinkedArray.push("different value") 
-
 console.log ("My array", array)
 console.log ("notlinked", notLinkedArray)
+
+// Spliee (Donde empiezan los elementos, elementos a borrar , *args)
+
+let galletas = ["Emperador", "Oreo", "Barritas", "Prinipe"]
+console.log(galletas)
+galletas.splice (1,2) 
+console.log(galletas)
+galletas.splice (1,0,'canelitas', 'lors')
+console.log(galletas)
+galletas.splice (1,3,'POLVORONES')
+console.log(galletas)
