@@ -82,3 +82,5 @@ galletas.splice (1,0,'canelitas', 'lors')
 console.log(galletas)
 galletas.splice (1,3,'POLVORONES')
 console.log(galletas)
+
+// Se viene el programa utilizando node
