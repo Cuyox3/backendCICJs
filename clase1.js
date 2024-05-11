@@ -313,7 +313,26 @@ function conversation (ac) {
 
 conversation(saludar)
 
-conversation(function (condition){ // El callback esta dentro de otra funcion 
+conversation(function (condition){ // El callback esta dentro de otra funcion es cuando se ocupa una sola vez 
     if (condition) console.log(" Como estas ? ")
     else console.log("Perdon voy tarde")
 } )
+
+
+
+const hardConversation = () => console.log("Miradas pesadas...")
+conversation(hardConversation)
+
+
+//Clushers  Funcion que retorna otra funcion recuerda el contexto de la funcion que lo retorno 
+/* 
+Funcion de orden superior, es una funcion que retorna otra funcion
+*/  
+
+function myClosure (meal1,meal2) {
+    console.log("meal1" + "-" + meal1)
+    return (meal2) => { console.log("My favorite meal are" ,meal1, meal2, meal3 ) }
+}
+
+const receivedFunction = myClosure("pizza", "enchiladas de spaguetti")
+receivedFunction("hamburguesa")
