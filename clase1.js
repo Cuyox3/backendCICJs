@@ -327,11 +327,12 @@ conversation(hardConversation)
 //Clushers  Funcion que retorna otra funcion recuerda el contexto de la funcion que lo retorno 
 /* 
 Funcion de orden superior, es una funcion que retorna otra funcion
+Recuerda los valores de la funcion superio como si fuera herencia 
 */  
 
 function myClosure (meal1,meal2) {
     console.log("meal1" + "-" + meal1)
-    return (meal2) => { console.log("My favorite meal are" ,meal1, meal2, meal3 ) }
+    return (meal3) => { console.log("My favorite meal are" ,meal1, meal2, meal3 ) }
 }
 
 const receivedFunction = myClosure("pizza", "enchiladas de spaguetti")
