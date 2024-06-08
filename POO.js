@@ -23,10 +23,13 @@ class Animal {
     }
 }
 
-class Dog extends Animal {
+class Dog extends Animal { // Herencia
+    
+    #home = "my home" //Encapsulamiento  no es privado pero se enmascaray esta difil optenerlo 
+
     constructor(bread, color){
-        super("mamifero")
-        this.bread = bread 
+    super("mamifero")
+    this.bread = bread 
     this.color =color
     }
     makeNoise() {
@@ -34,9 +37,22 @@ class Dog extends Animal {
     console.log("My bread is:", this.bread )
     console.log(Dog.naturaly)
     }
+     
     static sleep(){
         console.log("zzzzzzzzzz")
     }
+
+    get home (){ //Funcinan como propiedad 
+        return this.#home
+    }
+    set home(){
+        return this.#home
+    }
+
+    #play () {
+        console.log(play)
+
+    } 
 }
 
 class Cat{
