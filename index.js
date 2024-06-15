@@ -15,5 +15,18 @@ const clients = {
 }
 
 app.get('/clients', (req, res) =>  {
-    res.json(clients)
+    res.status(200).json({
+        clients,
+        message: "Clients list"
+    });
+});
+
+app.post('/clients', (req, res) =>  {
+    const info = req.body;
+    const clientsAmount = (Object.keys(clients).length + 1);
+    clients [clientsAmount] = info;
+    res.status(201).json({
+        clients,
+        message: "Clients list" 
+    });
 });
